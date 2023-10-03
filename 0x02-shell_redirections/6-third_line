@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Check if the file "iacta" exists in the current directory
+if [ -e "iacta" ]; then
+  # Use a counter to keep track of the line number
+  line_number=1
+
+  # Read the file line by line
+  while IFS= read -r line; do
+    # Check if this is the third line
+    if [ "$line_number" -eq 3 ]; then
+      echo "$line"
+      break  # Exit the loop once the third line is found
+    fi
+
+    # Increment the line number
+    ((line_number++))
+  done < "iacta"
+else
+  echo "File 'iacta' not found in the current directory."
+fi
+
