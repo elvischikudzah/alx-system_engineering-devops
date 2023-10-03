@@ -1,0 +1,4 @@
+#!/bin/bash
+file_name='*\''"Best School"'\''*$?*****:)'
+text_content="Best School"
+echo -e "$text_content" > "$file_name"
